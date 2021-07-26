@@ -3,6 +3,8 @@ const exhbs = require('express-handlebars')
 const products = require('./products.json')
 const app = express();
 
+const PORT = process.env.PORT || 444;
+
 
 app.use(express.static('public'));
 app.set('view engine', 'hbs');
@@ -27,6 +29,6 @@ app.get('/product/:productId', (req, res) => {
 
 
 
-app.listen(444, () => {
-    console.log('ejjjye ydhtpopj ${444}')
+app.listen(PORT, () => {
+    console.log('ejjjye ydhtpopj ${PORT}')
 });
